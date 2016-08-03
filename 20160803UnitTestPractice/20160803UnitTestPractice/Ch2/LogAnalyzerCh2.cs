@@ -9,7 +9,7 @@ namespace _20160803UnitTestPractice
     {
         public bool IsValidLogFileName(string fileName) 
         {
-            if (!fileName.EndsWith(".SLF")) 
+            if (!fileName.EndsWith(".SLF", StringComparison.OrdinalIgnoreCase)) 
             {
                 return false;
             }

@@ -16,5 +16,27 @@ namespace _20160803UnitTestPractice.Tests
             //Assert
             Assert.IsFalse(result);
         }
+
+        [TestMethod]
+        public void IsVaildFileName_GoodExtensionLowerCase_ReturnsTrue()
+        {
+             //arrange
+            LogAnalyzerCh2 analyzer = new LogAnalyzerCh2();
+            //act
+            var result = analyzer.IsValidLogFileName("filewithbadextension.slf");
+            //Assert
+            Assert.IsTrue(result);
+        }
+
+        [TestMethod]
+        public void IsVaildFileName_GoodExtensionUpperCase_ReturnsTrue()
+        {
+             //arrange
+            LogAnalyzerCh2 analyzer = new LogAnalyzerCh2();
+            //act
+            var result = analyzer.IsValidLogFileName("filewithbadextension.SLF");
+            //Assert
+            Assert.IsTrue(result);
+        }
     }
 }
