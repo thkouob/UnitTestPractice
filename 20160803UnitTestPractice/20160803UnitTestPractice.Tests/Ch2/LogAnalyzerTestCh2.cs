@@ -77,10 +77,12 @@ namespace _20160803UnitTestPractice.Tests
         }
 
         [Test]
+        [Category("Fast tests")]
         [Ignore("there is a problem with this test")]
         public void IsVaildFileName_ValidFile_ReturnsTrue()
         {
             //// just test for [Ignore] filter
+            ////can follow the category to testing in Nunit
         }
 
         [Test]
