@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ch2\LogAnalyzerCh2.cs" />
+    <Compile Include="Ch2\MemCalculatorCh2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup>
