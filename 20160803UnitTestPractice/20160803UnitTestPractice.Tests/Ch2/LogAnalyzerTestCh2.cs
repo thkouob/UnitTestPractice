@@ -66,5 +66,21 @@ namespace _20160803UnitTestPractice.Tests
             //Assert
             Assert.AreEqual(except, result);
         }
+
+        [Test]
+        public void IsVaildFileName_EmptyFileName_Throws()
+        {
+            LogAnalyzerCh2 la = MakeAnalyzer();
+            var ex = Assert.Catch<Exception>(() => la.IsValidLogFileName(""));
+            StringAssert.Contains("fileName has to be provided", ex.Message);
+            ////使用assert.catch返回exception對象
+        }
+
+        #region Private method
+        private LogAnalyzerCh2 MakeAnalyzer()
+        {
+            return new LogAnalyzerCh2();
+        }
+        #endregion 
     }
 }

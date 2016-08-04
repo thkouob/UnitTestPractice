@@ -9,6 +9,11 @@ namespace _20160803UnitTestPractice
     {
         public bool IsValidLogFileName(string fileName) 
         {
+            if (string.IsNullOrEmpty(fileName))
+            {
+                throw new ArgumentException("fileName has to be provided");
+            }
+            
             if (!fileName.EndsWith(".SLF", StringComparison.OrdinalIgnoreCase)) 
             {
                 return false;
