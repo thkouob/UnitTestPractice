@@ -3,10 +3,10 @@ using NUnit.Framework;
 
 namespace _20160803UnitTestPractice.Tests
 {
-    [TestFixture]
+    [TestFixture] ////nunit filter == [TestClass]
     public class LogAnalyzerTestCh2
     {
-        [Test]
+        [Test] ////nunit filter == [TestMethod]
         public void IsVaildFileName_BadExtension_ReturnsFalse()
         {
             //arrange

@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="Ch2\LogAnalyzerTestCh2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ch2\LogAnalyzerTestUsingSetupCh2.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\20160803UnitTestPractice\20160803UnitTestPractice.csproj">
