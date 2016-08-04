@@ -1,12 +1,12 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace _20160803UnitTestPractice.Tests
 {
-    [TestClass]
+    [TestFixture]
     public class LogAnalyzerTestCh2
     {
-        [TestMethod]
+        [Test]
         public void IsVaildFileName_BadExtension_ReturnsFalse()
         {
             //arrange
@@ -14,10 +14,10 @@ namespace _20160803UnitTestPractice.Tests
             //act
             var result = analyzer.IsValidLogFileName("filewithbadextension.foo");
             //Assert
-            Assert.IsFalse(result);
+            Assert.False(result);
         }
 
-        [TestMethod]
+        [Test]
         public void IsVaildFileName_GoodExtensionLowerCase_ReturnsTrue()
         {
              //arrange
@@ -25,10 +25,10 @@ namespace _20160803UnitTestPractice.Tests
             //act
             var result = analyzer.IsValidLogFileName("filewithbadextension.slf");
             //Assert
-            Assert.IsTrue(result);
+            Assert.True(result);
         }
 
-        [TestMethod]
+        [Test]
         public void IsVaildFileName_GoodExtensionUpperCase_ReturnsTrue()
         {
              //arrange
@@ -36,7 +36,35 @@ namespace _20160803UnitTestPractice.Tests
             //act
             var result = analyzer.IsValidLogFileName("filewithbadextension.SLF");
             //Assert
-            Assert.IsTrue(result);
+            Assert.True(result);
+        }
+
+        //// Use testCase, this filter is only in Nunit
+        [TestCase("filewithgoodextension.slf")]
+        [TestCase("filewithgoodextension.SLF")]
+        [Test]
+        public void IsVaildFileName_VaildExtension_ReturnsTrue(string fileName)
+        {
+            //arrange
+            LogAnalyzerCh2 analyzer = new LogAnalyzerCh2();
+            //act
+            var result = analyzer.IsValidLogFileName(fileName);
+            //Assert
+            Assert.True(result);
+        }
+
+        [TestCase("filewithgoodextension.foo", false)]
+        [TestCase("filewithgoodextension.SLF", true)]
+        [TestCase("filewithgoodextension.slf", true)]
+        [Test]
+        public void IsVaildFileName_VaildExtension_ChecksThem(string fileName, bool except)
+        {
+            //arrange
+            LogAnalyzerCh2 analyzer = new LogAnalyzerCh2();
+            //act
+            var result = analyzer.IsValidLogFileName(fileName);
+            //Assert
+            Assert.AreEqual(except, result);
         }
     }
 }
