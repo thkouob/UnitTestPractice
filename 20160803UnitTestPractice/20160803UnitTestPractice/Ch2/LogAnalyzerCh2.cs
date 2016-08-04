@@ -7,8 +7,12 @@ namespace _20160803UnitTestPractice
 {
     public class LogAnalyzerCh2
     {
+        public bool WasLastFileNameValid { get; set; }
+
         public bool IsValidLogFileName(string fileName) 
         {
+            WasLastFileNameValid = false;
+
             if (string.IsNullOrEmpty(fileName))
             {
                 throw new ArgumentException("fileName has to be provided");
@@ -19,6 +23,7 @@ namespace _20160803UnitTestPractice
                 return false;
             }
 
+            WasLastFileNameValid = true;
             return true;
         }
     }

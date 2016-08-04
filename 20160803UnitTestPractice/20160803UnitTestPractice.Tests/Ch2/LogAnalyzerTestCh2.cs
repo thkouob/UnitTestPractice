@@ -94,6 +94,23 @@ namespace _20160803UnitTestPractice.Tests
             //// also can use Assert.something();
         }
 
+        //[Test]
+        //public void IsVaildFileName_WhenCalled_ChangeWasLastFileNameValid()
+        //{
+        //    LogAnalyzerCh2 la = MakeAnalyzer();
+        //    la.IsValidLogFileName("badname.foo");
+        //    Assert.False(la.WasLastFileNameValid);
+        //}
+
+        //// refactory IsVaildFileName_WhenCalled_ChangeWasLastFileNameValid
+        [TestCase("badname.foo", false)]
+        [TestCase("goodname.slf", true)]
+        public void IsVaildFileName_WhenCalled_ChangeWasLastFileNameValid(string fileName, bool except)
+        {
+            LogAnalyzerCh2 la = MakeAnalyzer();
+            la.IsValidLogFileName(fileName);
+            Assert.AreEqual(except, la.WasLastFileNameValid);
+        }
 
         #region Private method
         private LogAnalyzerCh2 MakeAnalyzer()
