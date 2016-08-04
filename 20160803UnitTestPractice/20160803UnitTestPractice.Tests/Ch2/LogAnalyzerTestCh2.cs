@@ -76,6 +76,13 @@ namespace _20160803UnitTestPractice.Tests
             ////使用assert.catch返回exception對象
         }
 
+        [Test]
+        [Ignore("there is a problem with this test")]
+        public void IsVaildFileName_ValidFile_ReturnsTrue()
+        {
+            //// just test for [Ignore] filter
+        }
+
         #region Private method
         private LogAnalyzerCh2 MakeAnalyzer()
         {
