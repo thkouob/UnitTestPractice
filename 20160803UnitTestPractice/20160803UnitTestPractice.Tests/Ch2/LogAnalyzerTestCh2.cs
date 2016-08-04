@@ -83,6 +83,16 @@ namespace _20160803UnitTestPractice.Tests
             //// just test for [Ignore] filter
         }
 
+        [Test]
+        public void IsVaildFileName_EmptyFileName_ThrowsFluent()
+        {
+            LogAnalyzerCh2 la = MakeAnalyzer();
+            var ex = Assert.Catch<Exception>(() => la.IsValidLogFileName(""));
+            Assert.That(ex.Message, Is.StringContaining("fileName has to be provided"));
+            //// also can use Assert.something();
+        }
+
+
         #region Private method
         private LogAnalyzerCh2 MakeAnalyzer()
         {
