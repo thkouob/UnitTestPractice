@@ -42,5 +42,17 @@ namespace _20160803UnitTestPractice.Tests
             bool result = log.IsValidLogFileName("short.ext");
             Assert.IsTrue(result);
         }
+
+        [Test]
+        public void IsValidFileName_SupportedExtensionUsingFactoryClass_ReturnsTrue()
+        {
+            FakeExtensionManager myFakeManager = new FakeExtensionManager();
+            myFakeManager.WillBeValid = true;
+
+            ExtensionManagerFactory.SetManager(myFakeManager); //create Analyzer, di the stub
+            LogAnalyzerCh3WithFactoryClass log = new LogAnalyzerCh3WithFactoryClass();
+            bool result = log.IsValidLogFileName("short.ext");
+            Assert.IsTrue(result);
+        }
     }
 }
