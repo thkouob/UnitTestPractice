@@ -92,6 +92,7 @@
     <Compile Include="Ch2\LogAnalyzerCh2.cs" />
     <Compile Include="Ch2\MemCalculatorCh2.cs" />
     <Compile Include="Ch3\AlwaysValidFakeExtensionManagerCh3.cs" />
+    <Compile Include="Ch3\FakeExtensionManager.cs" />
     <Compile Include="Ch3\FileExtensionManager.cs" />
     <Compile Include="Ch3\IExtensionManager.cs" />
     <Compile Include="Ch3\LogAnalyzerCh3.cs" />

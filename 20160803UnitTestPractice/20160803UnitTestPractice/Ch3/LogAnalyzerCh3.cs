@@ -7,11 +7,16 @@ namespace _20160803UnitTestPractice
 {
     public class LogAnalyzerCh3
     {
+        private IExtensionManager manager;
+
+        public LogAnalyzerCh3(IExtensionManager mgr) 
+        {
+            manager = mgr;
+        }
+
         public bool IsValidLogFileName(string fileName) 
         {
-            FileExtensionManager mgr = new FileExtensionManager();
-
-            return mgr.IsValid(fileName);
+            return manager.IsValid(fileName);
         }
     }
 }
