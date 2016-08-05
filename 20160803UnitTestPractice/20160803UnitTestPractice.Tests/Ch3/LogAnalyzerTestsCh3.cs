@@ -29,5 +29,18 @@ namespace _20160803UnitTestPractice.Tests
             bool result = log.IsValidLogFileName("anything.anyextension");
             Assert.IsFalse(result);
         }
+
+        [Test]
+        public void IsValidFileName_SupportedExtension_ReturnsTrue()
+        {
+            FakeExtensionManager myFakeManager = new FakeExtensionManager();
+            myFakeManager.WillBeValid = true;
+
+            LogAnalyzerCh3re log = new LogAnalyzerCh3re();
+            log.ExtensionManager = myFakeManager;
+
+            bool result = log.IsValidLogFileName("short.ext");
+            Assert.IsTrue(result);
+        }
     }
 }
