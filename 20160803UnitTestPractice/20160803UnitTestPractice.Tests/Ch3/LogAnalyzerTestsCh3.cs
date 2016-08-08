@@ -54,5 +54,16 @@ namespace _20160803UnitTestPractice.Tests
             bool result = log.IsValidLogFileName("short.ext");
             Assert.IsTrue(result);
         }
+
+        [Test]
+        public void OverrideTests()
+        {
+            FakeExtensionManager stub = new FakeExtensionManager();
+            stub.WillBeValid = true;
+
+            TestableLogAnalyzer logan = new TestableLogAnalyzer(stub);
+            bool result = logan.IsValidLogFileName("file.ext");
+            Assert.True(result);
+        }
     }
 }
