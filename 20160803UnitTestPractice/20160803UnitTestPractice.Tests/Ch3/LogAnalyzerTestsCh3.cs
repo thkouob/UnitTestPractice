@@ -65,5 +65,15 @@ namespace _20160803UnitTestPractice.Tests
             bool result = logan.IsValidLogFileName("file.ext");
             Assert.True(result);
         }
+
+        [Test]
+        public void OverrideTestsWithoutStub()
+        {
+            TestableLogAnalyzer2 logan = new TestableLogAnalyzer2();
+            logan.IsSupported = true;
+
+            bool result = logan.IsValidLogFileName("file.ext");
+            Assert.IsTrue(result, "...");
+        }
     }
 }

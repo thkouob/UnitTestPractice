@@ -96,10 +96,12 @@
     <Compile Include="Ch3\FakeExtensionManager.cs" />
     <Compile Include="Ch3\FileExtensionManager.cs" />
     <Compile Include="Ch3\IExtensionManager.cs" />
+    <Compile Include="Ch3\LogAnalyzerCh3UsingFactoryMethod2.cs" />
     <Compile Include="Ch3\LogAnalyzerCh3UsingFactoryMethod.cs" />
     <Compile Include="Ch3\LogAnalyzerCh3WithFactoryClass.cs" />
     <Compile Include="Ch3\LogAnalyzerCh3re.cs" />
     <Compile Include="Ch3\LogAnalyzerCh3.cs" />
+    <Compile Include="Ch3\TestableLogAnalyzer 2.cs" />
     <Compile Include="Ch3\TestableLogAnalyzer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
