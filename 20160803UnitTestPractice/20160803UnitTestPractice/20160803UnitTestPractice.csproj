@@ -103,6 +103,9 @@
     <Compile Include="Ch3\LogAnalyzerCh3.cs" />
     <Compile Include="Ch3\TestableLogAnalyzer 2.cs" />
     <Compile Include="Ch3\TestableLogAnalyzer.cs" />
+    <Compile Include="Ch4\FakeWebService.cs" />
+    <Compile Include="Ch4\IWebService.cs" />
+    <Compile Include="Ch4\LogAnalyzerCh4.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

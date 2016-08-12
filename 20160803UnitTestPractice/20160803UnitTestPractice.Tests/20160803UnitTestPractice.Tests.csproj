@@ -71,6 +71,7 @@
     <Compile Include="Ch2\LogAnalyzerTestCh2.cs" />
     <Compile Include="Ch2\MemCalculatorTestsCh2.cs" />
     <Compile Include="Ch3\LogAnalyzerTestsCh3.cs" />
+    <Compile Include="Ch4\LogAnalyzerTestCh4.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ch2\LogAnalyzerTestUsingSetupCh2.cs" />
   </ItemGroup>
