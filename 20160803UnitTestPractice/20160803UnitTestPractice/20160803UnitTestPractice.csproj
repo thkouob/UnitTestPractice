@@ -103,10 +103,14 @@
     <Compile Include="Ch3\LogAnalyzerCh3.cs" />
     <Compile Include="Ch3\TestableLogAnalyzer 2.cs" />
     <Compile Include="Ch3\TestableLogAnalyzer.cs" />
+    <Compile Include="Ch4\EmailInfo.cs" />
     <Compile Include="Ch4\FakeEmailService.cs" />
+    <Compile Include="Ch4\FakeEmailServiceVer2.cs" />
     <Compile Include="Ch4\FakeWebService.cs" />
+    <Compile Include="Ch4\IEmailServiceVer2.cs" />
     <Compile Include="Ch4\IEmailService.cs" />
     <Compile Include="Ch4\IWebService.cs" />
+    <Compile Include="Ch4\LogAnalyzerCh4withTwoServiceVer2.cs" />
     <Compile Include="Ch4\LogAnalyzerCh4withTwoService.cs" />
     <Compile Include="Ch4\LogAnalyzerCh4.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
